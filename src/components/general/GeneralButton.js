@@ -41,15 +41,14 @@ styles = StyleSheet.create({
     alignItems: "center",
   },
   innerTextStyle: {
-    width: 38,
-    height: 20,
     color: "#6d503c",
-    fontSize: 14,
+    fontSize: 16,
     fontWeight: "bold",
     fontStyle: "normal",
     lineHeight: 20,
     letterSpacing: 0.1,
     textAlign: "center",
+    marginLeft: 10,
   },
   buttonArrowStyle: {},
 });

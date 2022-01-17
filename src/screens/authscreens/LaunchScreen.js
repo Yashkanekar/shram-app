@@ -1,7 +1,11 @@
 import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { Input, Button } from "react-native-elements/dist/input/Input";
 import GeneralButton from "../../components/general/GeneralButton";
+import Passwordinput from "../../components/general/Passwordinput";
+import GeneralTextInput from "../../components/general/GeneralTextInput";
+import Spacer from "../../components/Helpers/Spacer";
 
 const LaunchScreen = () => {
   return (
@@ -12,6 +16,9 @@ const LaunchScreen = () => {
       />
       <Text style={styles.textStyle}>Shram</Text>
       <GeneralButton innertext="Login" />
+      <Passwordinput />
+      <Spacer />
+      <GeneralTextInput inputFor="Email" />
     </SafeAreaView>
   );
 };
@@ -23,6 +30,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     flex: 1,
+    padding: 35,
   },
   logoStyle: {},
   textStyle: {

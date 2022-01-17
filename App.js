@@ -8,7 +8,6 @@ const navigator = createStackNavigator(
   {
     initialRouteName: "LaunchScreen",
     defaultNavigationOptions: {
-      // title: "Shram App",
       headerShown: false,
     },
   }

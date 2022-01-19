@@ -6,6 +6,7 @@ import GeneralButton from "../../components/general/GeneralButton";
 import Passwordinput from "../../components/general/Passwordinput";
 import GeneralTextInput from "../../components/general/GeneralTextInput";
 import Spacer from "../../components/Helpers/Spacer";
+import DropdownInput from "../../components/general/DropdownInput";
 
 const LaunchScreen = () => {
   return (
@@ -19,6 +20,8 @@ const LaunchScreen = () => {
       <Passwordinput />
       <Spacer />
       <GeneralTextInput inputFor="Email" />
+      <Spacer />
+      <DropdownInput />
     </SafeAreaView>
   );
 };

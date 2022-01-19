@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Input, Button } from "react-native-elements/dist/input/Input";
 import GeneralButton from "../../components/general/GeneralButton";
@@ -16,11 +16,25 @@ const LaunchScreen = () => {
         source={require("../../../assets/LaunchLogo.png")}
       />
       <Text style={styles.textStyle}>Shram</Text>
-      <GeneralButton innertext="Login" />
-      <Passwordinput />
+      <Spacer />
       <Spacer />
       <GeneralTextInput inputFor="Email" />
       <Spacer />
+      <Passwordinput />
+
+      <View style={styles.loginContainer}>
+
+        <View>
+        <TouchableOpacity>
+          <Text style={styles.newAccountStyle}>Create new account</Text>
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <Text style={styles.newAccountStyle}>Forgot password?</Text>
+        </TouchableOpacity>
+        </View>
+        
+        <GeneralButton innertext="Login" />
+      </View>
       <DropdownInput />
     </SafeAreaView>
   );
@@ -33,7 +47,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     flex: 1,
-    padding: 35,
+    // padding: 35,
   },
   logoStyle: {},
   textStyle: {
@@ -48,6 +62,22 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginTop: 25,
   },
+  newAccountStyle: {
+    color: "#6d503c",
+    fontSize: 11,
+    fontWeight: "700",
+    fontStyle: "normal",
+    lineHeight: 16,
+    letterSpacing: 0.5,
+    // textAlign: "left",
+  },
+  loginContainer: {
+    width: 300,
+    height: 52,
+    marginTop: 120,
+    flexDirection: "row",
+    justifyContent: "space-between",
+  }
 });
 
 export default LaunchScreen;

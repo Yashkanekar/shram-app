@@ -9,6 +9,7 @@ import Spacer from "../../components/Helpers/Spacer";
 import DropdownInput from "../../components/general/DropdownInput";
 
 const LaunchScreen = () => {
+
   return (
     <SafeAreaView style={styles.parentwrapperStyle}>
       <Image
@@ -34,6 +35,7 @@ const LaunchScreen = () => {
         </View>
         
         <GeneralButton innertext="Login" />
+
       </View>
       <DropdownInput />
     </SafeAreaView>

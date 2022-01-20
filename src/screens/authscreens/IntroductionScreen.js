@@ -29,6 +29,10 @@ const IntroductionScreen = () => {
       <Spacer></Spacer>
       <Spacer></Spacer>
       <GeneralButton innertext="Next" />
+
+      <View style={styles.buttonStyle}>
+        <GeneralButton innertext="Next" />
+      </View>
     </SafeAreaView>
   );
 };
@@ -51,6 +55,10 @@ const styles = StyleSheet.create({
     fontStyle: "normal",
     lineHeight: 28,
     letterSpacing: 0,
+  },
+  buttonStyle: {
+    marginTop: "95%",
+    marginLeft: 226,
   },
 });
 

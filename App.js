@@ -6,16 +6,15 @@ import LaunchScreen from "./src/screens/authscreens/LaunchScreen";
 const navigator = createStackNavigator(
   {
     launchScreen: LaunchScreen,
-    introduction: IntroductionScreen,
     createAccount: CreateAccountScreen,
+    introduction: IntroductionScreen,
   },
   {
-    initialRouteName: "launchScreen",
+    initialRouteName: "introduction",
     defaultNavigationOptions: {
       headerShown: false,
     },
   }
-
 );
 
 export default createAppContainer(navigator);

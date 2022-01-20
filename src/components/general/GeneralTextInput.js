@@ -10,7 +10,7 @@ const GeneralTextInput = ({ inputFor }) => {
       <Input
         value={inputvalue}
         label={inputFor}
-        placeholder={inputFor}
+        // placeholder={inputFor}
         containerStyle={styles.containerStyle}
         labelStyle={styles.labelStyle}
         inputContainerStyle={styles.inputStyle}
@@ -20,7 +20,6 @@ const GeneralTextInput = ({ inputFor }) => {
         selectionColor="#6d503c"
         onChangeText={(newValue) => {
           setValue(newValue);
-          console.log(inputvalue);
         }}
       />
     </View>
@@ -42,6 +41,7 @@ const styles = StyleSheet.create({
     fontStyle: "normal",
     lineHeight: 20,
     letterSpacing: 0.1,
+    // borderWidth: 1,
   },
   inputStyle: {
     color: "#6d503c",
@@ -50,9 +50,10 @@ const styles = StyleSheet.create({
   labelStyle: {
     textTransform: "capitalize",
     color: "#6d503c",
+    color: "#C5B4AA",
   },
   wrapperStyle: {
-    width: 300,
+    width: 320,
     flexDirection: "column",
   },
 });

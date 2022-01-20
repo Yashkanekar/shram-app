@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import { Text, View, StyleSheet } from "react-native";
 import { Input, Button } from "react-native-elements/dist/input/Input";
 
-const Passwordinput = () => {
+const Passwordinput = ({ heading }) => {
   const [inputvalue, setValue] = useState("");
 
   return (
     <View style={styles.wrapperStyle}>
       <Input
         value={inputvalue}
-        label="password"
-        placeholder="Password"
+        label={heading}
+        // placeholder={heading}
         containerStyle={styles.containerStyle}
         secureTextEntry={true}
         labelStyle={styles.labelStyle}
@@ -21,15 +21,14 @@ const Passwordinput = () => {
         selectionColor="#6d503c"
         onChangeText={(newValue) => {
           setValue(newValue);
-          console.log(inputvalue);
         }}
       />
-      {inputvalue.length < 8 ? (
-        <Text style={styles.errorMessageStyle}>
-          Password must be atleast 8 characters
-        </Text>
-      ) : (
+      {inputvalue.length >= 8 || inputvalue.length === 0 ? (
         <Text style={styles.emptyMessageStyle}></Text>
+      ) : (
+        <Text style={styles.errorMessageStyle}>
+          Password must contain atleast 8 characters
+        </Text>
       )}
     </View>
   );
@@ -58,6 +57,7 @@ const styles = StyleSheet.create({
   labelStyle: {
     textTransform: "capitalize",
     color: "#6d503c",
+    color: "#C5B4AA",
   },
   errorMessageStyle: {
     marginLeft: 10,
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     color: "#6d503c",
   },
   wrapperStyle: {
-    width: 300,
+    width: 320,
     flexDirection: "column",
   },
   emptyMessageStyle: {

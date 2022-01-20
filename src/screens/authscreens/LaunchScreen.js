@@ -8,7 +8,7 @@ import GeneralTextInput from "../../components/general/GeneralTextInput";
 import Spacer from "../../components/Helpers/Spacer";
 import DropdownInput from "../../components/general/DropdownInput";
 
-const LaunchScreen = () => {
+const LaunchScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.parentwrapperStyle}>
       <Image
@@ -20,22 +20,24 @@ const LaunchScreen = () => {
       <Spacer />
       <GeneralTextInput inputFor="Email" />
       <Spacer />
-      <Passwordinput />
+      <Passwordinput heading="Password" />
 
       <View style={styles.loginContainer}>
-
-        <View>
-        <TouchableOpacity>
-          <Text style={styles.newAccountStyle}>Create new account</Text>
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <Text style={styles.newAccountStyle}>Forgot password?</Text>
-        </TouchableOpacity>
+        <View style={styles.linkwrapper}>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate("createAccount");
+            }}
+          >
+            <Text style={styles.newAccountStyle}>Create new account</Text>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Text style={styles.newAccountStyle}>Forgot password?</Text>
+          </TouchableOpacity>
         </View>
-        
+
         <GeneralButton innertext="Login" />
       </View>
-      <DropdownInput />
     </SafeAreaView>
   );
 };
@@ -77,7 +79,11 @@ const styles = StyleSheet.create({
     marginTop: 120,
     flexDirection: "row",
     justifyContent: "space-between",
-  }
+  },
+  linkwrapper: {
+    flexDirection: "column",
+    justifyContent: "space-around",
+  },
 });
 
 export default LaunchScreen;

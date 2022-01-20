@@ -1,39 +1,48 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native"
+import { View, Text, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Input, Button } from "react-native-elements/dist/input/Input";
 import GeneralButton from "../../components/general/GeneralButton";
 import GeneralTextInput from "../../components/general/GeneralTextInput";
 import Spacer from "../../components/Helpers/Spacer";
+import DropdownInput from "../../components/general/DropdownInput";
+import DateInput from "../../components/general/DatePicker";
+import CustomHeader from "../../components/general/CustomHeader";
 
 const IntroductionScreen = () => {
   return (
     <SafeAreaView style={styles.parentwrapperStyle}>
+      <CustomHeader />
       <View style={styles.wrapper}>
-      <Text style={styles.textStyle}>
-        Welcome, tell us about yourself!
-      </Text>
-      <Spacer />
-      <GeneralTextInput inputFor='First Name' />
-      <Spacer />
-      <GeneralTextInput inputFor='Last Name' />
-      <Spacer />
+        <Text style={styles.textStyle}>Welcome, tell us about yourself!</Text>
+        <Spacer />
+        <GeneralTextInput inputFor="First Name" />
+        <Spacer />
+        <GeneralTextInput inputFor="Last Name" />
+        <Spacer />
+        <DropdownInput></DropdownInput>
+        <Spacer></Spacer>
+        <Spacer></Spacer>
+        <DateInput></DateInput>
       </View>
-      <GeneralButton innertext='Next' />
+
+      <Spacer></Spacer>
+      <Spacer></Spacer>
+      <GeneralButton innertext="Next" />
     </SafeAreaView>
   );
-}
+};
 
 const styles = StyleSheet.create({
   parentwrapperStyle: {
     backgroundColor: "#fffbf7",
     flexDirection: "column",
-    alignItems: "center",
     flex: 1,
-    padding: 35,
+    paddingLeft: 45,
+    paddingRight: 45,
   },
   wrapper: {
-    marginTop: 96,
+    marginTop: 36,
   },
   textStyle: {
     color: "#6d503c",

@@ -19,7 +19,10 @@ const IntroductionScreen = () => {
       <GeneralTextInput inputFor='Last Name' />
       <Spacer />
       </View>
+      
+      <View  style={styles.buttonStyle}>
       <GeneralButton innertext='Next' />
+      </View>
     </SafeAreaView>
   );
 }
@@ -43,6 +46,10 @@ const styles = StyleSheet.create({
     lineHeight: 28,
     letterSpacing: 0,
   },
+  buttonStyle: {
+    marginTop: '95%',
+    marginLeft: 226,
+  }
 });
 
 export default IntroductionScreen;

@@ -6,27 +6,28 @@ import GeneralButton from "../../components/general/GeneralButton";
 import GeneralTextInput from "../../components/general/GeneralTextInput";
 import Passwordinput from "../../components/general/Passwordinput";
 import Spacer from "../../components/Helpers/Spacer";
+import DropdownInput from "../../components/general/DropdownInput";
 
 
-const CreateAccountScreen = () => {
+const AboutOrganisationScreen= () => {
   return(
     <SafeAreaView style={styles.parentwrapperStyle}>
     <View style={styles.wrapper}>
     <Text style={styles.textStyle}>
-      Let's create your account.
+      Tell us about your Organistaion
     </Text>
     <Spacer />
     <GeneralTextInput inputFor='Email' />
     <Spacer />
-    <Passwordinput />
+    <DropdownInput />
     <Spacer />
-    <Passwordinput />
+    <DropdownInput />
     <Spacer />
     <Spacer />
     </View>
 
     <View style={styles.buttonStyle} >
-    <GeneralButton innertext='Done' />
+    <GeneralButton innertext='Next' />
     </View>
   </SafeAreaView>
   )
@@ -57,4 +58,4 @@ const styles = StyleSheet.create({
       },
 })
 
-export default CreateAccountScreen;
+export default AboutOrganisationScreen;

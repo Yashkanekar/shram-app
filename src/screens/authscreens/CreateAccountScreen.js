@@ -7,13 +7,9 @@ import GeneralButton from "../../components/general/GeneralButton";
 import GeneralTextInput from "../../components/general/GeneralTextInput";
 import Passwordinput from "../../components/general/Passwordinput";
 import Spacer from "../../components/Helpers/Spacer";
-<<<<<<< HEAD
 import DateInput from "../../components/general/DatePicker";
 import DropdownInput from "../../components/general/DropdownInput";
 import CustomHeader from "../../components/general/CustomHeader";
-=======
-
->>>>>>> 52713aeca3a0013bcaef106958be9987818fa0ef
 
 const CreateAccountScreen = ({ navigation }) => {
   return (
@@ -51,7 +47,7 @@ const styles = StyleSheet.create({
   },
   formwrapper: {
     marginTop: 36,
-    // borderWidth: 1,
+    borderWidth: 1,
   },
   buttonwrapper: {
     flexDirection: "row",
@@ -68,53 +64,8 @@ const styles = StyleSheet.create({
     letterSpacing: 0,
     paddingLeft: 12,
     paddingRight: 12,
+    borderWidth: 1,
   },
   buttonstyle: {},
 });
-    <View style={styles.wrapper}>
-    <Text style={styles.textStyle}>
-      Let's create your account.
-    </Text>
-    <Spacer />
-    <GeneralTextInput inputFor='Email' />
-    <Spacer />
-    <Passwordinput />
-    <Spacer />
-    <Passwordinput />
-    <Spacer />
-    <Spacer />
-    </View>
-
-    <View style={styles.buttonStyle} >
-    <GeneralButton innertext='Done' />
-    </View>
-  </SafeAreaView>
-  )
-}
-
-const styles = StyleSheet.create({
-    parentwrapperStyle: {
-        backgroundColor: "#fffbf7",
-        flexDirection: "column",
-        alignItems: "center",
-        flex: 1,
-        padding: 35,
-      },
-      wrapper: {
-        marginTop: 56,
-      },
-      textStyle: {
-        color: "#6d503c",
-        fontSize: 26,
-        fontWeight: "bold",
-        fontStyle: "normal",
-        lineHeight: 28,
-        letterSpacing: 0,
-      },
-      buttonStyle: {
-        marginTop: '88%',
-        marginLeft: 226,
-      },
-})
-
 export default CreateAccountScreen;

@@ -10,7 +10,7 @@ const navigator = createStackNavigator(
     introduction: IntroductionScreen,
   },
   {
-    initialRouteName: "introduction",
+    initialRouteName: "launchScreen",
     defaultNavigationOptions: {
       headerShown: false,
     },

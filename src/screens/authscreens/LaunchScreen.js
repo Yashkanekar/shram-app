@@ -1,19 +1,12 @@
 import React from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Input, Button } from "react-native-elements/dist/input/Input";
 import GeneralButton from "../../components/general/GeneralButton";
 import Passwordinput from "../../components/general/Passwordinput";
 import GeneralTextInput from "../../components/general/GeneralTextInput";
 import Spacer from "../../components/Helpers/Spacer";
-import DropdownInput from "../../components/general/DropdownInput";
 
-<<<<<<< HEAD
 const LaunchScreen = ({ navigation }) => {
-=======
-const LaunchScreen = () => {
-
->>>>>>> 52713aeca3a0013bcaef106958be9987818fa0ef
   return (
     <SafeAreaView style={styles.parentwrapperStyle}>
       <Image
@@ -42,7 +35,6 @@ const LaunchScreen = () => {
         </View>
 
         <GeneralButton innertext="Login" />
-
       </View>
     </SafeAreaView>
   );

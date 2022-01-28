@@ -19,6 +19,8 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-native": "0.64.3",
+    "react-native-auto-grow-textinput": "^1.2.1",
+    "react-native-autogrow-textinput": "^5.4.0",
     "react-native-datepicker": "^1.7.2",
     "react-native-elements": "^3.4.2",
     "react-native-gesture-handler": "~2.1.0",

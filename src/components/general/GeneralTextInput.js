@@ -1,21 +1,25 @@
 import React, { useState } from "react";
 import { Text, View, StyleSheet } from "react-native";
+import { TextInput } from 'react-native-paper';
 import { Input, Button } from "react-native-elements/dist/input/Input";
 
-const GeneralTextInput = ({ inputFor }) => {
-  const [inputvalue, setValue] = useState("");
+const GeneralTextInput = ({ inputFor, goalDescription }) => {
+  const [inputvalue, setValue] = useState(`${goalDescription}`);
 
   return (
     <View style={styles.wrapperStyle}>
-      <Input
+      <TextInput
         value={inputvalue}
-        label={inputFor}
+        label={inputFor} 
         // placeholder={inputFor}
+        // editable={false} 
+        multiline
+        activeUnderlineColor="#6d503c"
+        underlineColor="#c5b4aa"
         containerStyle={styles.containerStyle}
         labelStyle={styles.labelStyle}
         inputContainerStyle={styles.inputStyle}
         inputStyle={styles.inputTextStyles}
-        underlineColorAndroid="transparent"
         placeholderTextColor="#C5B4AA"
         selectionColor="#6d503c"
         onChangeText={(newValue) => {

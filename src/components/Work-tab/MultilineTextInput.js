@@ -10,8 +10,9 @@ const MultilineTextInput = (props) => {
       <AutoGrowingTextInput
         placeholder="Type your Organization goal"
         multiline
-        numberOfLines={3} 
-        maxLength={80}
+        maxRows={4}
+        // numberOfLines={3} 
+        maxLength={60}
         onChangeText={(text) => onChangeText(text)}
         style={styles.textStyle}
       />

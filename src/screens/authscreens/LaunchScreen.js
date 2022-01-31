@@ -16,7 +16,7 @@ const LaunchScreen = ({ navigation }) => {
       <Text style={styles.textStyle}>Shram</Text>
       <Spacer />
       <Spacer />
-      <GeneralTextInput inputFor="Email" />
+      <GeneralTextInput inputFor="Email" goalDescription="" />
       <Spacer />
       <Passwordinput heading="Password" />
 

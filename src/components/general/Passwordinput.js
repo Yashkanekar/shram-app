@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Text, View, StyleSheet } from "react-native";
+import { TextInput } from 'react-native-paper';
 import { Input, Button } from "react-native-elements/dist/input/Input";
 
 const Passwordinput = ({ heading }) => {
@@ -7,16 +8,17 @@ const Passwordinput = ({ heading }) => {
 
   return (
     <View style={styles.wrapperStyle}>
-      <Input
+      <TextInput
         value={inputvalue}
         label={heading}
         // placeholder={heading}
+        activeUnderlineColor="#6d503c"
+        underlineColor="#c5b4aa"
         containerStyle={styles.containerStyle}
         secureTextEntry={true}
         labelStyle={styles.labelStyle}
         inputContainerStyle={styles.inputStyle}
         inputStyle={styles.inputTextStyles}
-        underlineColorAndroid="transparent"
         placeholderTextColor="#C5B4AA"
         selectionColor="#6d503c"
         onChangeText={(newValue) => {

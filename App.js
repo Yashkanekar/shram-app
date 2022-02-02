@@ -7,6 +7,7 @@ import IntroductionScreen from "./src/screens/authscreens/IntroductionScreen";
 import LaunchScreen from "./src/screens/authscreens/LaunchScreen";
 import WorkTabScreen from "./src/screens/WorkTab/WorkTabScreen";
 import UnitGoalsScreen from "./src/screens/WorkTab/UnitGoalsScreen";
+import TargetScreen from "./src/screens/WorkTab/TargetScreen";
 
 const Stack = createNativeStackNavigator();
 

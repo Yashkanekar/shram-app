@@ -9,16 +9,16 @@ import DropdownInput from "../../components/general/DropdownInput";
 import DateInput from "../../components/general/DatePicker";
 import CustomHeader from "../../components/general/CustomHeader";
 
-const IntroductionScreen = () => {
+const IntroductionScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.parentwrapperStyle}>
-      <CustomHeader />
+      <CustomHeader navigation={navigation} navigateto="createAccount" />
       <View style={styles.wrapper}>
         <Text style={styles.textStyle}>Welcome, tell us about yourself!</Text>
         <Spacer />
-        <GeneralTextInput inputFor="First Name" />
+        <GeneralTextInput inputFor="First Name" goalDescription="" />
         <Spacer />
-        <GeneralTextInput inputFor="Last Name" />
+        <GeneralTextInput inputFor="Last Name" goalDescription="" />
         <Spacer />
         <DropdownInput></DropdownInput>
         <Spacer></Spacer>

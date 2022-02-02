@@ -1,14 +1,16 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import { View, StyleSheet, TouchableOpacity } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
-import { useNavigation } from "@react-navigation/native";
-import { NavigationContainer } from "@react-navigation/native";
 
-const CustomHeader = () => {
+const CustomHeader = ({ navigation, navigateto }) => {
   return (
     <View style={styles.headerwrapper}>
-      <TouchableOpacity style={styles.touchableopacity}>
+      <TouchableOpacity
+        style={styles.touchableopacity}
+        onPress={() => {
+          navigation.navigate(`${navigateto}`);
+        }}
+      >
         <View>
           <AntDesign name="arrowleft" size={24} color="#6d503c" />
         </View>
@@ -19,12 +21,14 @@ const CustomHeader = () => {
 
 const styles = StyleSheet.create({
   headerwrapper: {
-    borderColor: "red",
+    borderColor: "black",
     flexDirection: "row",
     marginTop: 32,
+    // borderWidth: 1,
   },
   touchableopacity: {
     borderColor: "red",
+    // borderWidth: 1,
   },
 });
 

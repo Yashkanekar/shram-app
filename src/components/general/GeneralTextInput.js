@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Text, View, StyleSheet } from "react-native";
-import { TextInput } from 'react-native-paper';
+import { TextInput } from "react-native-paper";
 import { Input, Button } from "react-native-elements/dist/input/Input";
+import { fonts } from "react-native-elements/dist/config";
 
 const GeneralTextInput = ({ inputFor, goalDescription }) => {
   const [inputvalue, setValue] = useState(`${goalDescription}`);
@@ -10,18 +11,16 @@ const GeneralTextInput = ({ inputFor, goalDescription }) => {
     <View style={styles.wrapperStyle}>
       <TextInput
         value={inputvalue}
-        label={inputFor} 
-        // placeholder={inputFor}
-        // editable={false} 
+        label={inputFor}
         multiline
-        activeUnderlineColor="#6d503c"
-        underlineColor="#c5b4aa"
-        containerStyle={styles.containerStyle}
-        labelStyle={styles.labelStyle}
-        inputContainerStyle={styles.inputStyle}
-        inputStyle={styles.inputTextStyles}
-        placeholderTextColor="#C5B4AA"
-        selectionColor="#6d503c"
+        style={styles.inputstyle}
+        theme={{
+          colors: {
+            primary: "#6d503c",
+            text: "#6d503c",
+            placeholder: "#c5b4aa",
+          },
+        }}
         onChangeText={(newValue) => {
           setValue(newValue);
         }}
@@ -31,34 +30,17 @@ const GeneralTextInput = ({ inputFor, goalDescription }) => {
 };
 
 const styles = StyleSheet.create({
-  inputTextStyles: {
-    fontSize: 18,
-    fontWeight: "bold",
-    fontStyle: "normal",
-    lineHeight: 20,
-    letterSpacing: 0.1,
-    color: "#6d503c",
-  },
-  containerStyle: {
-    fontSize: 14,
-    fontWeight: "bold",
-    fontStyle: "normal",
-    lineHeight: 20,
-    letterSpacing: 0.1,
-    // borderWidth: 1,
-  },
-  inputStyle: {
-    color: "#6d503c",
-    marginBottom: -20,
-  },
-  labelStyle: {
-    textTransform: "capitalize",
-    color: "#6d503c",
-    color: "#C5B4AA",
-  },
   wrapperStyle: {
     width: 320,
     flexDirection: "column",
+  },
+  inputstyle: {
+    fontSize: 18,
+    fontWeight: "bold",
+    fontStyle: "normal",
+    lineHeight: 12,
+    letterSpacing: 0.5,
+    backgroundColor: "#fffbf7",
   },
 });
 

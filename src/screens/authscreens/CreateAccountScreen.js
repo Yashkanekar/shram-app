@@ -14,12 +14,12 @@ import CustomHeader from "../../components/general/CustomHeader";
 const CreateAccountScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.parentwrapperStyle}>
-      <CustomHeader />
+      <CustomHeader navigation={navigation} navigateto={"launchScreen"} />
       <View style={styles.formwrapper}>
         <Text style={styles.textStyle}>Let's create your account.</Text>
         <Spacer />
         <Spacer />
-        <GeneralTextInput inputFor="Email" />
+        <GeneralTextInput inputFor="Email" goalDescription="" />
         <Spacer />
         <Spacer />
         <Passwordinput heading="Create Password" />
@@ -28,7 +28,12 @@ const CreateAccountScreen = ({ navigation }) => {
         <Spacer />
         <Spacer />
         <View style={styles.buttonwrapper}>
-          <GeneralButton style={styles.buttonstyle} innertext="Done" />
+          <GeneralButton
+            style={styles.buttonstyle}
+            innertext="Done"
+            navigateto="introduction"
+            navigation={navigation}
+          />
         </View>
       </View>
     </SafeAreaView>
@@ -47,7 +52,7 @@ const styles = StyleSheet.create({
   },
   formwrapper: {
     marginTop: 36,
-    borderWidth: 1,
+    // borderWidth: 1,
   },
   buttonwrapper: {
     flexDirection: "row",
@@ -64,7 +69,7 @@ const styles = StyleSheet.create({
     letterSpacing: 0,
     paddingLeft: 12,
     paddingRight: 12,
-    borderWidth: 1,
+    // borderWidth: 1,
   },
   buttonstyle: {},
 });

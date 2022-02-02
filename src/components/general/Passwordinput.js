@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Text, View, StyleSheet } from "react-native";
-import { TextInput } from 'react-native-paper';
+import { TextInput } from "react-native-paper";
 import { Input, Button } from "react-native-elements/dist/input/Input";
 
 const Passwordinput = ({ heading }) => {
@@ -11,16 +11,15 @@ const Passwordinput = ({ heading }) => {
       <TextInput
         value={inputvalue}
         label={heading}
-        // placeholder={heading}
-        activeUnderlineColor="#6d503c"
-        underlineColor="#c5b4aa"
-        containerStyle={styles.containerStyle}
         secureTextEntry={true}
-        labelStyle={styles.labelStyle}
-        inputContainerStyle={styles.inputStyle}
-        inputStyle={styles.inputTextStyles}
-        placeholderTextColor="#C5B4AA"
-        selectionColor="#6d503c"
+        style={styles.inputstyle}
+        theme={{
+          colors: {
+            primary: "#6d503c",
+            text: "#6d503c",
+            placeholder: "#c5b4aa",
+          },
+        }}
         onChangeText={(newValue) => {
           setValue(newValue);
         }}
@@ -37,29 +36,18 @@ const Passwordinput = ({ heading }) => {
 };
 
 const styles = StyleSheet.create({
-  inputTextStyles: {
+  wrapperStyle: {
+    width: 320,
+    flexDirection: "column",
+  },
+  inputstyle: {
     fontSize: 18,
     fontWeight: "bold",
     fontStyle: "normal",
-    lineHeight: 20,
-    letterSpacing: 0.1,
     color: "#6d503c",
-  },
-  containerStyle: {
-    fontSize: 14,
-    fontWeight: "bold",
-    fontStyle: "normal",
-    lineHeight: 20,
-    letterSpacing: 0.1,
-  },
-  inputStyle: {
-    color: "#6d503c",
-    marginBottom: -20,
-  },
-  labelStyle: {
-    textTransform: "capitalize",
-    color: "#6d503c",
-    color: "#C5B4AA",
+    lineHeight: 12,
+    letterSpacing: 0.5,
+    backgroundColor: "#fffbf7",
   },
   errorMessageStyle: {
     marginLeft: 10,
@@ -68,10 +56,6 @@ const styles = StyleSheet.create({
     fontStyle: "normal",
     letterSpacing: 0.5,
     color: "#6d503c",
-  },
-  wrapperStyle: {
-    width: 320,
-    flexDirection: "column",
   },
   emptyMessageStyle: {
     marginLeft: 10,

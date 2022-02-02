@@ -1,17 +1,14 @@
 import React from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 
-const GeneralButton = ({ innertext }) => {
+const GeneralButton = ({ innertext, navigateto, navigation }) => {
   return (
-    // <View style={styles.buttonwrapperStyle}>
-    //   <Button style={styles.buttonStyle} title={innertext}></Button>
-    //   <Image
-    //     style={styles.buttonArrowStyle}
-    //     source={require("../../../assets/ButtonArrow.png")}
-    //   />
-    // </View>
-
-    <TouchableOpacity style={styles.buttonwrapperStyle}>
+    <TouchableOpacity
+      style={styles.buttonwrapperStyle}
+      onPress={() => {
+        navigation.navigate(`${navigateto}`);
+      }}
+    >
       <View style={styles.textStyle}>
         <Text style={styles.innerTextStyle}>{innertext}</Text>
       </View>

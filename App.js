@@ -1,25 +1,48 @@
-import { createAppContainer } from "react-navigation";
-import { createStackNavigator } from "react-navigation-stack";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Tabs from "./src/navigation/Tabs";
+
 import CreateAccountScreen from "./src/screens/authscreens/CreateAccountScreen";
 import IntroductionScreen from "./src/screens/authscreens/IntroductionScreen";
 import LaunchScreen from "./src/screens/authscreens/LaunchScreen";
 import WorkTabScreen from "./src/screens/WorkTab/WorkTabScreen";
 import UnitGoalsScreen from "./src/screens/WorkTab/UnitGoalsScreen";
 
-const navigator = createStackNavigator(
-  {
-    launchScreen: LaunchScreen,
-    createAccount: CreateAccountScreen,
-    introduction: IntroductionScreen,
-    workTab: WorkTabScreen,
-    unitGoals: UnitGoalsScreen,
-  },
-  {
-    initialRouteName: "unitGoals",
-    defaultNavigationOptions: {
-      headerShown: false,
-    },
-  }
-);
+const Stack = createNativeStackNavigator();
 
-export default createAppContainer(navigator);
+const App = () => {
+  return (
+    <NavigationContainer>
+      {/* <Stack.Navigator initialRouteName="launchScreen">
+        <Stack.Screen
+          name="launchScreen"
+          component={LaunchScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="createAccount"
+          component={CreateAccountScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="introduction"
+          component={IntroductionScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="workTab"
+          component={WorkTabScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="unitGoals"
+          component={UnitGoalsScreen}
+          options={{ headerShown: false }}
+        />
+      </Stack.Navigator> */}
+      <Tabs />
+    </NavigationContainer>
+  );
+};
+
+export default App;

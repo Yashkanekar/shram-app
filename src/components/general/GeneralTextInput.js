@@ -54,7 +54,6 @@ const styles = StyleSheet.create({
   labelStyle: {
     textTransform: "capitalize",
     color: "#6d503c",
-    color: "#C5B4AA",
   },
   wrapperStyle: {
     width: 320,

@@ -8,27 +8,25 @@ import Spacer from '../../components/Helpers/Spacer';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-const UnitGoalsScreen = () => {
-  return(
-  <SafeAreaView style={styles.parentwrapperStyle}>
-    <ScrollView>
-      <View style={styles.textContainer}>
-        <Text style={{
-          color: "#c5b4aa",
-        }}>ORGANIZATION GOAL</Text>
-        <Text style={styles.textStyle}>Build Shram MVP 1.0 and gain traction pre-launch.</Text>
-        <Text style={{
-          color: "#c5b4aa",
-          marginTop: 30,
-          marginBottom: 24.5,
-        }}>Q1 until Mar end</Text>
-      </View>
+const TargetScreen = () => {
+  return (
+    <SafeAreaView style={styles.parentwrapperStyle}>
 
-      <View style={{
-        borderBottomColor: '#c5b4aa',
-        borderBottomWidth: 1,
-      }}>
-      </View>
+      <Card style={styles.cardStyle}>
+        <Card.Content>
+          <View style={styles.iconStyle}>
+            <Title style={styles.cardTitle}>UI-UX</Title>
+            <MaterialIcons name="edit" size={18} color="#c5b4aa" />
+          </View>
+          <Spacer />
+
+          <View>
+            <Text style={styles.textStyle}>Create high fidelity MVP 2.0</Text>
+            <Text>Term till Jan </Text>
+          </View>
+        </Card.Content>
+      </Card>
+
       <View style={{
         borderLeftColor: '#c5b4aa',
         height: 60,
@@ -39,24 +37,19 @@ const UnitGoalsScreen = () => {
       <Card style={styles.cardStyle}>
         <Card.Content>
           <View style={styles.iconStyle}>
-            <Title style={styles.cardTitle}>UNIT GOALS</Title>
+            <Title style={styles.cardTitle}>UI-UX TARGETS</Title>
             <MaterialIcons name="edit" size={18} color="#c5b4aa" />
           </View>
           <Spacer />
 
           <TouchableOpacity>
-            <GeneralTextInput inputFor="RESEARCH" goalDescription="Validate User requirements" style={styles.textInputStyle} />
+            <GeneralTextInput inputFor="TARGET 1" goalDescription="Complete all Screens for MVP 1.0" style={styles.textInputStyle} />
           </TouchableOpacity>
           <Spacer />
-          <GeneralTextInput inputFor="TECH" goalDescription="Build Foundation for Shram MVP" />
+          <GeneralTextInput inputFor="TARGET 2" goalDescription="Complete all Screens for MVP 2.0" />
           <Spacer />
-          <GeneralTextInput inputFor="UI-UX" goalDescription="Create high fidelity MVP 2.0" />
+          <GeneralTextInput inputFor="TARGET 3" goalDescription="Make the final Display Prototype" />
           <Spacer />
-          <GeneralTextInput inputFor="MARKETING" goalDescription="Create brand presence" />
-          <Spacer />
-          <GeneralTextInput inputFor="ADMIN" goalDescription="Build a strong team and onboard everyone completely" />
-          <Spacer />
-
 
           <View style={styles.iconStyle}>
             <Text
@@ -70,18 +63,14 @@ const UnitGoalsScreen = () => {
 
         </Card.Content>
       </Card>
-    </ScrollView>
-  </SafeAreaView>
-);
+      
+    </SafeAreaView>
+  );
 }
 
 const styles = StyleSheet.create({
   parentwrapperStyle: {
     backgroundColor: "#fffbf7",
-  },
-  textContainer: {
-    marginHorizontal: 40,
-    marginTop: 113,
   },
   textStyle: {
     fontSize: 30,
@@ -122,5 +111,4 @@ const styles = StyleSheet.create({
   },
 });
 
-
-export default UnitGoalsScreen;
+export default TargetScreen;

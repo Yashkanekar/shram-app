@@ -1,27 +1,37 @@
-import * as React from "react";
-import { View, Text, TextInput, StyleSheet, ScrollView } from "react-native";
-import { Card, Title, Paragraph } from "react-native-paper";
-import { AntDesign } from "@expo/vector-icons";
-import { MaterialIcons } from "@expo/vector-icons";
-import GeneralTextInput from "../../components/general/GeneralTextInput";
-import Spacer from "../../components/Helpers/Spacer";
-import { TouchableOpacity } from "react-native-gesture-handler";
-import { SafeAreaView } from "react-native-safe-area-context";
+import * as React from 'react';
+import { View, Text, TextInput, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
+import { Card, Title, Chip } from 'react-native-paper';
+import { AntDesign } from '@expo/vector-icons';
+import { MaterialIcons } from '@expo/vector-icons';
+import GeneralTextInput from '../../components/general/GeneralTextInput';
+import Spacer from '../../components/Helpers/Spacer';
+import AppHeader from '../../components/Work-tab/AppHeader';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const TargetScreen = () => {
   return (
     <SafeAreaView style={styles.parentwrapperStyle}>
+
+      <AppHeader />
+      <Spacer />
+      <Spacer />
+      <Spacer />
+
       <Card style={styles.cardStyle}>
         <Card.Content>
           <View style={styles.iconStyle}>
-            <Title style={styles.cardTitle}>UI-UX</Title>
+            <Chip
+              mode='outlined'
+              selectedColor="#e53a69"
+              style={styles.chipStyle}
+            >UI-UX</Chip>
             <MaterialIcons name="edit" size={18} color="#c5b4aa" />
           </View>
           <Spacer />
 
           <View>
             <Text style={styles.textStyle}>Create high fidelity MVP 2.0</Text>
-            <Text>Term till Jan </Text>
+            <Text style={{color: '#c5b4aa'}}>Term till Jan </Text>
           </View>
         </Card.Content>
       </Card>
@@ -66,7 +76,7 @@ const TargetScreen = () => {
             <Text
               style={{
                 marginTop: 20,
-                color: "#6d503c",
+                color: '#c5b4aa',
               }}
             >
               Term till Jan end 4w to go
@@ -82,6 +92,13 @@ const TargetScreen = () => {
 const styles = StyleSheet.create({
   parentwrapperStyle: {
     backgroundColor: "#fffbf7",
+  },
+  chipStyle: {
+    backgroundColor: "#fffbf7",
+    borderRadius: 16,
+    borderStyle: "solid",
+    borderWidth: 1,
+    borderColor: "#e53a69"
   },
   textStyle: {
     fontSize: 30,

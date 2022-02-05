@@ -28,8 +28,6 @@ const IntroductionScreen = ({ navigation }) => {
 
       <Spacer></Spacer>
       <Spacer></Spacer>
-      <GeneralButton innertext="Next" />
-
       <View style={styles.buttonStyle}>
         <GeneralButton innertext="Next" />
       </View>

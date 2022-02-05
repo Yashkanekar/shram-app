@@ -14,7 +14,7 @@ const Stack = createNativeStackNavigator();
 const App = () => {
   return (
     <NavigationContainer>
-      {/* <Stack.Navigator initialRouteName="launchScreen">
+      <Stack.Navigator initialRouteName="launchScreen">
         <Stack.Screen
           name="launchScreen"
           component={LaunchScreen}
@@ -40,8 +40,13 @@ const App = () => {
           component={UnitGoalsScreen}
           options={{ headerShown: false }}
         />
-      </Stack.Navigator> */}
-      <Tabs />
+        <Stack.Screen
+          name="targets"
+          component={TargetScreen}
+          options={{ headerShown: false }}
+        />
+      </Stack.Navigator>
+      {/* <Tabs /> */}
     </NavigationContainer>
   );
 };

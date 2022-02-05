@@ -8,13 +8,14 @@ import LaunchScreen from "./src/screens/authscreens/LaunchScreen";
 import WorkTabScreen from "./src/screens/WorkTab/WorkTabScreen";
 import UnitGoalsScreen from "./src/screens/WorkTab/UnitGoalsScreen";
 import TargetScreen from "./src/screens/WorkTab/TargetScreen";
+import TaskScreen from "./src/screens/WorkTab/TaskScreen";
 
 const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
     <NavigationContainer>
-      {/* <Stack.Navigator initialRouteName="launchScreen">
+      <Stack.Navigator initialRouteName="tasks">
         <Stack.Screen
           name="launchScreen"
           component={LaunchScreen}
@@ -40,8 +41,18 @@ const App = () => {
           component={UnitGoalsScreen}
           options={{ headerShown: false }}
         />
-      </Stack.Navigator> */}
-      <Tabs />
+        <Stack.Screen
+          name="targets"
+          component={TargetScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="tasks"
+          component={TaskScreen}
+          options={{ headerShown: false }}
+        />
+      </Stack.Navigator>
+      {/* <Tabs /> */}
     </NavigationContainer>
   );
 };

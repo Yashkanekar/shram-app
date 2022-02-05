@@ -8,7 +8,7 @@ import Spacer from '../../components/Helpers/Spacer';
 import AppHeader from '../../components/Work-tab/AppHeader';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-const TargetScreen = () => {
+const TaskScreen = () => {
   return (
     <SafeAreaView style={styles.parentwrapperStyle}>
 
@@ -31,7 +31,7 @@ const TargetScreen = () => {
 
           <View>
             <Text style={styles.textStyle}>Create high fidelity MVP 2.0</Text>
-            <Text style={{color: '#c5b4aa'}}>Term till Jan </Text>
+            <Text style={{ color: '#c5b4aa' }}>Term till Jan </Text>
           </View>
         </Card.Content>
       </Card>
@@ -42,40 +42,50 @@ const TargetScreen = () => {
         borderLeftWidth: 1,
         left: '50%',
       }}></View>
+      <View style={{
+        borderBottomColor: '#c5b4aa',
+        borderBottomWidth: 1,
+      }}></View>
 
-      <Card style={styles.cardStyle}>
-        <Card.Content>
-          <View style={styles.iconStyle}>
-            <Title style={styles.cardTitle}>UI-UX TARGETS</Title>
-            <MaterialIcons name="edit" size={18} color="#c5b4aa" />
-          </View>
-          <Spacer />
+      <View style={styles.targetStyleWrapper}>
+        <View style={styles.targetStyle}>
+          <Text>TARGET 1 | </Text>
+          <Text>TARGET 2</Text>
+        </View>
+        <MaterialIcons name="zoom-out-map" size={18} color="#c5b4aa" />
+      </View>
 
-          <TouchableOpacity>
-            <GeneralTextInput inputFor="TARGET 1" goalDescription="Complete all Screens for MVP 1.0" style={styles.textInputStyle} />
-          </TouchableOpacity>
-          <Spacer />
-          <GeneralTextInput inputFor="TARGET 2" goalDescription="Complete all Screens for MVP 2.0" />
-          <Spacer />
-          <GeneralTextInput inputFor="TARGET 3" goalDescription="Make the final Display Prototype" />
-          <Spacer />
+      <Text style={{
+        color: '#6d503c',
+        fontSize: 18,
+        fontWeight: "500",
+        fontStyle: "normal",
+        lineHeight: 22,
+        letterSpacing: 0.1,
+        marginTop: 22,
+      }}>Complete all Screens for MVP 2.0</Text>
 
-          <View style={styles.iconStyle}>
-            <Text
-              style={{
-                marginTop: 20,
-                color: '#c5b4aa',
-              }}
-            >Term till Jan end 4w to go</Text>
-            <AntDesign name="pluscircleo" size={48} color="#6d503c" />
-          </View>
+      <ScrollView horizontal={true}>
 
-        </Card.Content>
-      </Card>
+        <Text>Child 1</Text>
+        <Text>Child 2</Text>
+        <Text>Child 3</Text>
+        <Text>Child 4</Text>
+        <Text>Child 5</Text>
+        <Text>Child 6</Text>
+        <Text>Child 7</Text>
+        <Text>Child 8</Text>
+        <Text>Child 9</Text>
+        <Text>Child 10</Text>
+        <Text>Child 11</Text>
+        <Text>Child 12</Text>
 
+      </ScrollView>
+
+      {/* <MaterialIcons name="filter-list" size={24} color="black" /> */}
     </SafeAreaView>
-  );
-}
+  )
+};
 
 const styles = StyleSheet.create({
   parentwrapperStyle: {
@@ -102,29 +112,17 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     marginHorizontal: 20,
   },
-  cardTitle: {
-    color: '#6d503c',
-    marginBottom: 28,
-    fontSize: 20,
-    fontWeight: "bold",
-    fontStyle: "normal",
-    lineHeight: 20,
-    letterSpacing: 0.1,
-    textAlign: "left",
-  },
-  textInputStyle: {
-    color: '#6d503c',
-    fontSize: 16,
-    fontWeight: "bold",
-    fontStyle: "normal",
-    lineHeight: 24,
-    letterSpacing: 0.1,
-    textAlign: "left",
-  },
   iconStyle: {
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
+  targetStyleWrapper: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  targetStyle: {
+    flexDirection: 'row',
+  },
 });
 
-export default TargetScreen;
+export default TaskScreen;

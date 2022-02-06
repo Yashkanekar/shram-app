@@ -2,6 +2,7 @@ import React from "react";
 import { View, StyleSheet, TouchableOpacity, Text } from "react-native";
 import CustomChip from "../general/CustomChip";
 import { MaterialIcons } from "@expo/vector-icons";
+import { exp } from "react-native-reanimated";
 
 const TaskCard = () => {
   return (
@@ -41,8 +42,6 @@ const TaskCard = () => {
   );
 };
 
-export default TaskCard;
-
 const styles = StyleSheet.create({
   cardwrapper: {
     width: 162,
@@ -52,7 +51,8 @@ const styles = StyleSheet.create({
     borderStyle: "solid",
     borderWidth: 1,
     padding: 12,
-    margin: 6,
+    marginRight: 12,
+    // marginBottom: 12,
     borderColor: "#6d503c",
   },
   chipstyle: {
@@ -71,3 +71,5 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
 });
+
+export default TaskCard;

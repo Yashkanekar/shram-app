@@ -23,7 +23,7 @@ const IntroductionScreen = ({ navigation }) => {
         <DropdownInput></DropdownInput>
         <Spacer></Spacer>
         <Spacer></Spacer>
-        <DateInput></DateInput>
+        <DateInput label="Birth Date" placeholder="Select Date"></DateInput>
       </View>
 
       <Spacer></Spacer>

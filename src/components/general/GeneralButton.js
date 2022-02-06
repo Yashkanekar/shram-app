@@ -12,30 +12,24 @@ const GeneralButton = ({ innertext, navigateto, navigation }) => {
       <View style={styles.textStyle}>
         <Text style={styles.innerTextStyle}>{innertext}</Text>
       </View>
-      <Image
+      {/* <Image
         style={styles.buttonArrowStyle}
         source={require("../../../assets/ButtonArrow.png")}
-      />
+      /> */}
     </TouchableOpacity>
   );
 };
 
 styles = StyleSheet.create({
   buttonwrapperStyle: {
-    width: 104,
+    // width: 104,
     flexDirection: "row",
     borderColor: "#6d503c",
     borderWidth: 1.5,
     borderRadius: 16,
     alignItems: "center",
-    justifyContent: "space-around",
-    color: "blue",
-    height: 52,
-  },
-  textStyle: {
-    borderStyle: "solid",
-    flexDirection: "row",
-    alignItems: "center",
+    justifyContent: "center",
+    // height: 52,
   },
   innerTextStyle: {
     color: "#6d503c",
@@ -45,7 +39,7 @@ styles = StyleSheet.create({
     lineHeight: 20,
     letterSpacing: 0.1,
     textAlign: "center",
-    marginLeft: 10,
+    margin: 16,
   },
   buttonArrowStyle: {},
 });

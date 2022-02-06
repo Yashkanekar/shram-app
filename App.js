@@ -11,6 +11,8 @@ import TargetScreen from "./src/screens/WorkTab/TargetScreen";
 import TaskScreen from "./src/screens/WorkTab/TaskScreen";
 import ShramTab from "./src/screens/ShramTab/ShramTab";
 
+import TaskCreationScreen from "./src/screens/WorkTab/TaskCreationScreen";
+
 const Stack = createNativeStackNavigator();
 
 const App = () => {
@@ -50,6 +52,11 @@ const App = () => {
         <Stack.Screen
           name="tasks"
           component={TaskScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="taskcreation"
+          component={TaskCreationScreen}
           options={{ headerShown: false }}
         />
         <Stack.Screen

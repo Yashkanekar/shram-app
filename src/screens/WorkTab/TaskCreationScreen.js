@@ -6,7 +6,7 @@ import { Chip } from "react-native-paper";
 import TaskInput from "../../components/Work-tab/TaskInput";
 import DateInput from "../../components/general/DatePicker";
 import CustomTimePicker from "../../components/Work-tab/TimePicker";
-import HourInput from "./HourInput";
+import HourInput from "../../components/Work-tab/HourInput";
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,

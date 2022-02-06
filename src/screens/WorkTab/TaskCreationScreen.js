@@ -13,10 +13,15 @@ import {
 } from "react-native-responsive-screen";
 import GeneralButton from "../../components/general/GeneralButton";
 
-const TaskCreationScreen = () => {
+const TaskCreationScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.parentwrapper}>
-      <TouchableOpacity style={{ flexDirection: "row-reverse" }}>
+      <TouchableOpacity
+        style={{ flexDirection: "row-reverse" }}
+        onPress={() => {
+          navigation.navigate("tasks");
+        }}
+      >
         <MaterialIcons name="close" size={24} color="#6d503c" />
       </TouchableOpacity>
       <View

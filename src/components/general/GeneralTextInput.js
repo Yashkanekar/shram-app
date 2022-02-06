@@ -10,6 +10,7 @@ const GeneralTextInput = ({ inputFor, goalDescription }) => {
   return (
     <View style={styles.wrapperStyle}>
       <TextInput
+        editable={false}
         value={inputvalue}
         label={inputFor}
         multiline

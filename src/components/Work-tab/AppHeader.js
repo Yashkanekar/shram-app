@@ -22,10 +22,10 @@ const AppHeader = () => {
           <MaterialIcons name="notifications" size={24} color="#6d503c" />
         </TouchableOpacity>
         <TouchableOpacity>
-          <MaterialIcons name="support-agent" size={24} color="#c5b4aa" />
+          <MaterialIcons name="support-agent" size={24} color="#6d503c" />
         </TouchableOpacity>
         <TouchableOpacity>
-          <FontAwesome name="user-circle" size={24} color="black" />
+          <FontAwesome name="user-circle" size={24} color="#6d503c" />
         </TouchableOpacity>
       </View>
     </View>
@@ -51,4 +51,3 @@ const styles = StyleSheet.create({
 });
 
 export default AppHeader;
-

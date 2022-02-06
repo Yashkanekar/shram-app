@@ -1,8 +1,9 @@
 import { View, StyleSheet, Text, Image } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import WorkTabScreen from "../screens/WorkTab/WorkTabScreen";
+// import WorkTabScreen from "../screens/WorkTab/WorkTabScreen";
 import ShramTab from "../screens/ShramTab/ShramTab";
 import PeopleTab from "../screens/PeopleTab/PeopleTab";
+import WorkTabStackScreen from "./WorkTabStackScreen";
 
 import { MaterialIcons } from "@expo/vector-icons";
 
@@ -78,7 +79,7 @@ const Tabs = () => {
       />
       <Tab.Screen
         name="worktabscreenlaunch"
-        component={WorkTabScreen}
+        component={WorkTabStackScreen}
         options={{
           tabBarIcon: ({ focused }) => (
             <View style={{ alignItems: "center", justifyContent: "center" }}>

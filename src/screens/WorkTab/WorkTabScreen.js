@@ -11,9 +11,7 @@ const WorkTabScreen = () => {
       <View style={styles.textStyle}>
         <Text style={styles.textInput}>ORGANIZATION GOAL</Text>
       </View>
-
       <MultilineTextInput />
-
       <View style={styles.textStyle}>
         <Text style={styles.textInput}>Q1 until Mar end </Text>
       </View>

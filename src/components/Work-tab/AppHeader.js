@@ -32,8 +32,6 @@ const AppHeader = () => {
   );
 };
 
-export default AppHeader;
-
 const styles = StyleSheet.create({
   headerwrapper: {
     borderColor: "black",
@@ -51,3 +49,6 @@ const styles = StyleSheet.create({
     flex: 0.4,
   },
 });
+
+export default AppHeader;
+

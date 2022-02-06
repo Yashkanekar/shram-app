@@ -3,23 +3,21 @@ import { SafeAreaView, StyleSheet, Text, View } from "react-native";
 import DatePicker from "react-native-datepicker";
 import { Entypo } from "@expo/vector-icons";
 
-const DateInput = () => {
-  const [date, setDate] = useState(new Date());
+const DateInput = ({ label, placeholder, customstyles }) => {
+  const [date, setDate] = useState();
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Date of birth</Text>
+      {label ? <Text style={styles.text}>{label}</Text> : null}
       <DatePicker
         showIcon={true}
-        style={styles.datePickerStyle}
+        style={{ ...customstyles }}
         date={date}
         mode="date"
-        placeholder="select date"
+        placeholder={placeholder}
         format="DD/MM/YYYY"
         minDate="01-01-1950"
         maxDate="01-01-2023"
-        // confirmBtnText="Confirm"
-        // cancelBtnText="Cancel"
         iconComponent={<Entypo name="calendar" size={24} color="#6d503c" />}
         customStyles={{
           dateIcon: {
@@ -58,12 +56,7 @@ const DateInput = () => {
   );
 };
 
-export default DateInput;
-
 const styles = StyleSheet.create({
-  datePickerStyle: {
-    width: 198,
-  },
   text: {
     textAlign: "left",
     width: 230,
@@ -76,3 +69,4 @@ const styles = StyleSheet.create({
     letterSpacing: 0.1,
   },
 });
+export default DateInput;

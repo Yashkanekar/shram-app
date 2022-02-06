@@ -10,12 +10,14 @@ import UnitGoalsScreen from "./src/screens/WorkTab/UnitGoalsScreen";
 import TargetScreen from "./src/screens/WorkTab/TargetScreen";
 import TaskScreen from "./src/screens/WorkTab/TaskScreen";
 
+import TaskCreationScreen from "./src/screens/WorkTab/TaskCreationScreen";
+
 const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="tasks">
+      <Stack.Navigator initialRouteName="taskcreation">
         <Stack.Screen
           name="launchScreen"
           component={LaunchScreen}
@@ -49,6 +51,11 @@ const App = () => {
         <Stack.Screen
           name="tasks"
           component={TaskScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="taskcreation"
+          component={TaskCreationScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
